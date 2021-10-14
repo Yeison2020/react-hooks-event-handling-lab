@@ -1,24 +1,19 @@
 // Code EyesOnMe Component Here
 
 function EyesOnMe() {
-  function handleClick(e) {
-    console.log("Enter Password Changed:", e.target.value);
+  function handleFocus() {
+    console.log("Focus");
+  }
+
+  function handleBlur() {
+    console.log("Blur");
   }
   return (
-    <div>
-      <form>
-        <label>Enter Your Password</label>
-        <br />
-        <input
-          onChange={handleClick}
-          type="password"
-          name="password"
-          placeholder="Enter password..."
-        />
-        <br />
-        <input type="submit" value="submit"></input>
-      </form>
-    </div>
+    <>
+      <button onBlur={handleBlur} onFocus={handleFocus}>
+        Eyes on me
+      </button>
+    </>
   );
 }
 
